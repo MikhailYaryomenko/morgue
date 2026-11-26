@@ -5,13 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.jspecify.annotations.NonNull;
 
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity
 class Deceased {
+
+    // TODO: Validate deceasedId uniqueness at database and service level
+    // TODO: Add date of creation
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
